@@ -1,1 +1,1 @@
-export * from './src/route-exporter';
+export * from '/src/route-exporter';
