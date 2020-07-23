@@ -1,0 +1,14 @@
+# source
+tests
+index.ts
+package-lock.json
+tsconfig.json
+.prettierrc
+
+# misc
+.release-it.json
+.eslintignore
+.eslintrc.js
+renovate.json
+.prettierignore
+.prettierrc
