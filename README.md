@@ -22,20 +22,37 @@ $ npm i --save nestjs-route-exporter
 $ yarn add nestjs-route-exporter --save
 ```
 
-## Usage
+## Generating typescript routes
 ```javascript
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   
   // Generate typescript routes file
   routeExporter(app, 'http://localhost:3001', './routes', 'index.ts'); // Will generate index.ts in root/routes dir
-
-  // Generate js routes file
-  routeExporter(app, 'http://localhost:3001', './routes', 'index.js'); // Will generate index.ts in root/routes dir
 }
 
 bootstrap();
 ```
+
+- If you have Header controller in your Nest application output will be generated in root/routes/index.ts file 
+
+![Typescript](assets/typescript.png)
+
+## Generating javascript routes
+```javascript
+async function bootstrap() {
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  
+  // Generate typescript routes file
+  routeExporter(app, 'http://localhost:3001', './routes', 'index.js'); // Will generate index.js in root/routes dir
+}
+
+bootstrap();
+```
+
+- If you have Header controller in your Nest application output will be generated in root/routes/index.js file 
+
+![Javascript](assets/javascript.png)
 
 ## Support
 

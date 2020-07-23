@@ -15,5 +15,4 @@ npm-debug.log
 /coverage
 
 # dist
-/lib/src
 /dist
