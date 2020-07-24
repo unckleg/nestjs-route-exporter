@@ -1,22 +1,21 @@
 {
   "name": "nestjs-route-exporter",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Nest route exporter, exports application routes with developer friendly interface for consuming them on FE apps or somewhere else.",
   "author": "Djordje Stojiljkovic <djordjestojilljkovic@gmail.com>",
   "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc -p tsconfig.json",
-    "format": "prettier **/**/*.ts --ignore-path ./.prettierignore --write",
-    "lint": "eslint 'src/**/*.ts' --fix",
-    "prepublish:npm": "npm run build",
-    "publish:npm": "npm publish --access public",
-    "prepublish:next": "npm run build",
-    "publish:next": "npm publish --access public --tag next",
-    "test:integration": "jest --config ./tests/jest-e2e.json --runInBand",
-    "test:integration:dev": "jest --config ./tests/jest-e2e.json --runInBand --watch",
-    "prerelease": "npm run build",
-    "release": "release-it"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "@nestjs/common": "7.3.2",
@@ -57,6 +56,7 @@
       "pre-commit": "lint-staged"
     }
   },
+  "files": ["lib/**/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/unckleg/nestjs-route-exporter.git"
