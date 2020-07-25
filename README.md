@@ -22,6 +22,19 @@ $ npm i --save nestjs-route-exporter
 $ yarn add nestjs-route-exporter --save
 ```
 
+## Note!
+Before generating routes modify ```tsconfig.json``` file to not watch exported routes directory because
+you will end up in recursive compilation:
+```javascript
+  ...
+  
+  "include": [
+    "./src/**/*"
+  ],
+
+  "exclude": ["node_modules", "dist", "routes/**/*"]
+```
+
 ## Generating typescript routes
 ```javascript
 async function bootstrap() {
