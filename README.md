@@ -3,9 +3,11 @@
 </p>
 
 <p align="center"><p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
+  <img src="https://img.shields.io/github/license/unckleg/nestjs-route-exporter">
+  <img src="https://img.shields.io/npm/v/nestjs-route-exporter?color=brightGreen" />
+<img src="https://img.shields.io/badge/test-passing-brightgreen" />
+<img src="https://img.shields.io/github/issues/unckleg/nestjs-route-exporter" />
   <a href="https://paypal.com/paypalme/ucnkleg"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/uncklegdev"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
 
 ## Description
