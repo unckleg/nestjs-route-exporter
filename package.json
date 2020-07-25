@@ -1,6 +1,6 @@
 {
   "name": "nestjs-route-exporter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nest route exporter, exports application routes with developer friendly interface for consuming them on FE apps or somewhere else.",
   "author": "Djordje Stojiljkovic <djordjestojilljkovic@gmail.com>",
   "license": "MIT",
